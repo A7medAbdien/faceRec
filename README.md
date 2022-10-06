@@ -27,3 +27,7 @@ Set-ExecutionPolicy Unrestricted -Scope Process
 .\scripts\activate
 
 ```
+
+## Fix GPU problem
+
+download CUDA Toolkit and cuDNN SDK, simply follow [this](https://stackoverflow.com/questions/41402409/tensorflow-doesnt-seem-to-see-my-gpu)
