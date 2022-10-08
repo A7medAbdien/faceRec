@@ -28,7 +28,7 @@ Set-ExecutionPolicy Unrestricted -Scope Process
 
 ```
 
-when jupter does not load the output of the cell, image or other stuff, [just reload](https://stackoverflow.com/questions/68736618/error-loading-preloads-could-not-find-renderer) it 😜
+when jupter does not render the output of the cell, image or other stuff, [just reload](https://stackoverflow.com/questions/68736618/error-loading-preloads-could-not-find-renderer) it 😜
 
 ## Fix GPU problem
 
