@@ -56,7 +56,6 @@ class CamApp(App):
     # Run continuously to get webcam feed
     # convert raw OpenCV image -> texture can be rendered
     def update(self, *args):
-
         # Read frame form OpenCV
         ret, frame = self.capture.read()
         frame = frame[120:120+250, 200:200+250, :]
@@ -90,8 +89,8 @@ class CamApp(App):
     # verification function
     def verify(self, *args):
         # Specify threshold
-        detection_threshold = 0.8
-        verification_threshold = 0.5
+        detection_threshold = 0.6
+        verification_threshold = 0.6
 
         # Cupture input image from image
         SAVE_PATH = os.path.join(
@@ -104,7 +103,7 @@ class CamApp(App):
         results = []
         for image in os.listdir(os.path.join('application_data', 'verification_images')):
             input_img = self.preprocess(os.path.join(
-                'application_data', 'input_data', 'input_image.jpg'),)
+                'application_data', 'input_data', 'input_image.jpg'))
             verification_img = self.preprocess(os.path.join(
                 'application_data', 'verification_images', image))
 
@@ -118,15 +117,14 @@ class CamApp(App):
 
         # Verification threshold
         verification = detection / \
-            len(os.listdir(os.path.join('application_data',
-                'verification_images')))
+            len(os.listdir(os.path.join('application_data', 'verification_images')))
         verified = verification > verification_threshold
 
         # Set verification text
-        self.verification_Label.text = 'Verified' if verification == True else 'Unverified'
+        self.verification_Label.text = 'Verified' if verified == True else 'Unverified'
 
         # Logger
-        # Logger.info(results)
+        Logger.info(results)
         Logger.info(detection)
         Logger.info(verification)
         Logger.info(verified)
