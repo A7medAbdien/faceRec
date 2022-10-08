@@ -42,7 +42,7 @@ class CamApp(App):
 
         # Load tensorflow kerase model
         self.model = tf.keras.models.load_model(
-            'siamese_model.h5', custom_objects={'L1Dist': L1Dist})
+            'siamese_modelv3.h5', custom_objects={'L1Dist': L1Dist})
 
         # Setup video capture device
         # get image form webcam
@@ -90,7 +90,7 @@ class CamApp(App):
     # verification function
     def verify(self, *args):
         # Specify threshold
-        detection_threshold = 0.5
+        detection_threshold = 0.8
         verification_threshold = 0.5
 
         # Cupture input image from image
@@ -126,7 +126,7 @@ class CamApp(App):
         self.verification_Label.text = 'Verified' if verification == True else 'Unverified'
 
         # Logger
-        Logger.info(results)
+        # Logger.info(results)
         Logger.info(detection)
         Logger.info(verification)
         Logger.info(verified)
