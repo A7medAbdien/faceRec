@@ -28,6 +28,8 @@ Set-ExecutionPolicy Unrestricted -Scope Process
 
 ```
 
+when jupter does not load the output of the cell, image or other stuff, [just reload](https://stackoverflow.com/questions/68736618/error-loading-preloads-could-not-find-renderer) it 😜
+
 ## Fix GPU problem
 
 download CUDA Toolkit and cuDNN SDK, simply follow [this](https://stackoverflow.com/questions/41402409/tensorflow-doesnt-seem-to-see-my-gpu)
