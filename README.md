@@ -31,3 +31,7 @@ Set-ExecutionPolicy Unrestricted -Scope Process
 ## Fix GPU problem
 
 download CUDA Toolkit and cuDNN SDK, simply follow [this](https://stackoverflow.com/questions/41402409/tensorflow-doesnt-seem-to-see-my-gpu)
+
+## To add app folder to github
+
+[how to add a folder to hithub](https://stackoverflow.com/questions/12258399/how-do-i-create-a-folder-in-a-github-repository)
